@@ -1,0 +1,171 @@
+header, footer {
+    border: 2px solid #093a2e;
+    width: calc(82% + 70px);
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Блоки */
+#leftBlock, #infopage {
+    border: 2px solid #093a2e;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    float: left;
+    min-height: 220px;   /* однакова висота */
+}
+
+#leftBlock {
+    width: 20%;
+    margin-left: 5%;
+}
+
+#infopage {
+    width: 63%;
+}
+
+/* Фон */
+body {
+    background-image: url("fon.jpg");
+    background-repeat: repeat;
+    background-size: 500px auto;
+    margin: 0;
+}
+
+/* Заголовок */
+header h1 {
+    color: red;
+    text-align: center;
+}
+
+/* Запитання */
+.questionNum,
+.questionName {
+    font-weight: bold;
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-style: normal; /* курсив прибрано */
+}
+
+/* Контейнер для варіантів */
+.question-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Варіанти відповідей */
+.question-container label {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    line-height: 1.6;
+    font-style: normal; /* курсив прибрано */
+}
+
+.question-container input[type=radio],
+.question-container input[type=checkbox] {
+    margin-right: 8px;
+}
+
+/* Галочки та хрестики */
+.question-container input.correct+label:after,
+.question-container input.incorrect+label:after {
+    font-size: 22px;
+    margin-left: 8px;
+    position: static;
+    align-self: center;
+}
+
+/* Приховати рекламний блок */
+#quiz_container > div:last-child {
+    display: none;
+}
+
+/* Результати */
+.quiz-result {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.explanation {
+    color: #333;
+    font-size: 20px;
+}
+
+/* Кнопки */
+button {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    border: none !important;
+    background-color: #007BFF !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+}
+
+button:hover {
+    background-color: #0056b3 !important;
+}
+
+button:active {
+    background-color: #004080 !important;
+}
+
+footer {
+    border: 2px solid #093a2e;
+    width: calc(82% + 70px);
+    background-color: white;
+    margin: 10px;
+    padding: 5px;        /* менший відступ → нижчий футер */
+    border-radius: 5px;
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+  #leftBlock, #infopage {
+    width: 90%;       /* блоки займають майже всю ширину */
+    margin-left: 5%;
+    float: none;      /* прибираємо float, щоб вони йшли один під одним */
+  }
+
+  header, footer {
+    width: 95%;       /* трохи компактніше */
+    font-size: 18px;  /* менший шрифт для мобільного */
+  }
+
+  .questionNum,
+  .questionName {
+    font-size: 18px;  /* зменшений розмір тексту */
+  }
+
+  .question-container label {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
